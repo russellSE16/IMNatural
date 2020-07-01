@@ -1,0 +1,87 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgba(170, 168, 117, 0.8); 
+    margin: 0; /*Remove the small margin that defaults on the left*/
+}
+h1 {
+    font-size: 3rem;
+    margin-left: 5%; /*Bring the main title in from the banner image*/
+}
+h2 {
+    font-size: 2.5rem;
+}
+a { /*Remove the default link styling*/
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: underline;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed; /*Keep the header when user scrolls down*/
+    top: 0;
+    height: 80px;
+    width: 100%; /*Needed to keep banner stretched across page when position: fixed is used */
+    z-index: 1; /*Keeps banner at front of page when position: fixed is used */
+    color: white;
+    background-color: rgb(110, 93, 38);
+    border-bottom: solid 3px rgb(140, 121, 62);
+}
+main, footer {
+    position: relative; /*Enable offset of other parts of the page while header is fixed*/
+    top: 100px; /*Offsets sections to be below the header*/
+    text-align: center;
+}    
+section {
+    padding: 80px 0;
+}
+footer {
+    color: white;
+    background-color: rgb(110, 93, 38);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+nav li {
+    display: inline;
+    padding: 0 10px;
+}
+ 
+.banner {
+    background-image: url("./images/matthew-smith-Rfflri94rs8-unsplash.jpg");
+    height: 700px;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 25px 0 0 0;
+}
+.chocolate-box {
+    display: flex;
+    justify-content: space-around;    
+}
+.chocolate {
+    height: 700px;
+    width: 400px;
+    border: solid 3px rgb(140, 121, 62);
+}
+.chocolate img {
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.chocolate a{
+    background-color: rgb(110, 93, 38);
+    padding: 10px;
+    border-radius: 10%;
+}
+#top { /*Ensures link to #top section scrolls all the way to top*/
+    position: absolute;
+    top: 0; 
+}
